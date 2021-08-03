@@ -1,0 +1,40 @@
+/* Nav */
+.gc-nav{
+    background-color: rgb(121, 102, 207);
+}
+
+.logo-container img{
+    width: 8%;
+}
+
+#nav-list a{
+    text-decoration: none;
+}
+
+#nav-list li{
+    display: inline;
+    list-style: none;
+    color:white;
+    font-size: 125%;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+}
+
+/* End Nav */
+
+.middle-section{
+    margin-top: 20vh;
+}
+
+.footer-sign-up{
+    background-color: rgb(121, 102, 207);
+}
+
+.footer-btn{
+    font-size: 150%;
+    padding: 15px 25px;
+}
+
+.btn {
+    border-radius: 10px;
+}
