@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../static/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
     <title>Game Console Inventory</title>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="gc-nav d-flex align-items-center text-white py-3 justify-content-between">
+        <a href="{{ url_for('site.home') }}" class="home-link">
         <div class="logo-container d-flex align-items-center ms-3">
+            
             <img src="../static/images/game-controller.svg" alt="Game Controller Logo" 
-            class="mx-3">
-            <h3 class="ms-3">Game.Console.DB</h3>
+            class="mx-3 d-block">
+            <h3 class="ms-3 text-white">Game.Console.DB</h3>
+        
         </div>
+    </a>
         <div class="d-flex align-items-center me-5">
             <ul id="nav-list" class="d-flex align-items-center">
                 <a href="">
@@ -44,8 +50,6 @@
     {% block content %}
     {% endblock content %}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
