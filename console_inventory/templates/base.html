@@ -31,18 +31,21 @@
                 <a href="">
                     <li>Donate</li>
                 </a>
-                <a href="">
-                    <li>Profile</li>
-                </a>
-                <a href="">
-                    <li>Log Out</li>
-                </a>
-                <a href="{{ url_for('auth.signin') }}">
-                    <li>Log In</li>
-                </a>
-                <a href="{{ url_for('auth.signup') }}">
-                    <li>Sign Up</li>
-                </a>
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('site.profile') }}">
+                        <li>Profile</li>
+                    </a>
+                    <a href="{{ url_for('auth.logout') }}">
+                        <li>Log Out</li>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('auth.signin') }}">
+                        <li>Log In</li>
+                    </a>
+                    <a href="{{ url_for('auth.signup') }}">
+                        <li>Sign Up</li>
+                    </a>
+                {% endif %}
             </ul>
         </div>
     </nav>
