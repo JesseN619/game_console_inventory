@@ -83,7 +83,11 @@
     <!-- Footer -->
     <div class="col-12 text-center my-5">
         <button class="btn btn-warning footer-btn m-4">Donate</button>
+        {% if not current_user.is_authenticated %}
+        <a href="{{ url_for('auth.signup') }}">
         <button class="btn footer-sign-up footer-btn m-4">Sign Up</button>
+        </a>
+        {% endif %}
     </div>
 
 </div>
